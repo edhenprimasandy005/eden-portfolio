@@ -271,4 +271,38 @@ module.exports = [
     description:
       "Develop a comprehensive web app focused on digital marketing that empowers businesses and brands to expand their reach and grow on a global scale, providing tools for audience targeting, analytics, content management, and campaign optimization.",
   },
+  {
+    id: 18,
+    tag: "Web App",
+    role: "Frontend Engineer",
+    year: "2024",
+    title: "Dease - Design Request Web App",
+    img: ["/images/slider/client-dease.svg", "/images/work_images/dease.png"],
+    imgSmall: "/images/slider/client-dease.svg",
+    bg: "#FFF0F0",
+    imageBg: "#f79321",
+    client: "Dease",
+    languages: "Go-Lang, MongoDB, React + NextJS",
+    link: "",
+    linkText: "",
+    description:
+      "A web app for creating design requests lets users submit and track design projects, like logos or marketing materials. Users fill out a form with details, and the app provides tools to monitor progress, give feedback, and store completed designs. It streamlines the design process and ensures efficient communication with the design team.",
+  },
+  {
+    id: 19,
+    tag: "Web App",
+    role: "Frontend Engineer",
+    year: "2024",
+    title: "BSI Event POS",
+    img: ["/images/slider/client-bsi.png", "/images/work_images/bsi.jpeg"],
+    imgSmall: "/images/slider/client-bsi.png",
+    bg: "#FFF0F0",
+    imageBg: "#e1f1f1",
+    client: "PT Bank Syariah Indonesia",
+    languages: "Go-Lang, MongoDB, React + NextJS",
+    link: "",
+    linkText: "",
+    description:
+      "Web app POS for international event from Bank Syariah Indonesia",
+  },
 ];
