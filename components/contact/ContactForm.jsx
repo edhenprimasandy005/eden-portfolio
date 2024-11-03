@@ -60,7 +60,7 @@ const CommonContact = ({ condition }) => {
         </span>
         <br />
         <span className="font-semibold dark:text-white">
-          design work or partnerships.
+          website and mobile work or partnerships.
         </span>
       </h3>
 

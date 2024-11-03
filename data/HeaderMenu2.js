@@ -8,31 +8,31 @@ module.exports = [
   {
     id: 1,
     name: "Home",
-    routePath: "/home-box-layout/home",
+    routePath: "/home",
     icon: <AiOutlineHome />,
   },
   {
     id: 2,
     name: "Resume",
-    routePath: "/home-box-layout/resume",
+    routePath: "/resume",
     icon: <CgNotes />,
   },
   {
     id: 3,
     name: "Works",
-    routePath: "/home-box-layout/works",
+    routePath: "/works",
     icon: <FiCodesandbox />,
   },
-  {
-    id: 4,
-    name: "Blogs",
-    routePath: "/home-box-layout/blogs",
-    icon: <FaBlogger />,
-  },
+  // {
+  //   id: 4,
+  //   name: "Blogs",
+  //   routePath: "/blogs",
+  //   icon: <FaBlogger />,
+  // },
   {
     id: 5,
     name: "Contact",
-    routePath: "/home-box-layout/contact",
+    routePath: "/contact",
     icon: <RiContactsBookLine />,
   },
 ];

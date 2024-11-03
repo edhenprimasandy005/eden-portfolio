@@ -1,8 +1,8 @@
-import Preview from "./preview/page";
+import HomePage from "./(pages)/home/page"
 export const metadata = {
   title:
-    "Preview || Bostami - Tailwind CSS  Personal Portfolio React Nextjs Template",
+    "Edhen Primasandy Portfolio",
 };
 export default function Home() {
-  return <Preview />;
+  return <HomePage />;
 }

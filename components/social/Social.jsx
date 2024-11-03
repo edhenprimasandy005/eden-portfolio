@@ -1,33 +1,40 @@
 import {
-  FaDribbble,
   FaFacebookF,
+  FaGithub,
+  FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const Social = () => {
   const socialContent = [
     {
+      id: 5,
+      link: "https://github.com/edhenprimasandy005",
+      icon: <FaGithub />,
+      iconClass: "text-black",
+    },
+    {
       id: 1,
-      link: "https://www.facebook.com/",
+      link: "https://www.facebook.com/edenprimasandy",
       icon: <FaFacebookF />,
       iconClass: "text-[#1773EA]",
     },
     {
       id: 2,
-      link: "https://twitter.com/",
-      icon: <FaTwitter />,
-      iconClass: "text-[#1C9CEA]",
+      link: "https://x.com/edenprimasandy",
+      icon: <FaXTwitter />,
+      iconClass: "text-black",
     },
     {
       id: 3,
-      link: "https://dribbble.com/",
-      icon: <FaDribbble />,
+      link: "https://instagram.com/eden_primasandy",
+      icon: <FaInstagram />,
       iconClass: "text-[#e14a84]",
     },
     {
       id: 4,
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/edhenprimasandy",
       icon: <FaLinkedinIn />,
       iconClass: "text-[#0072b1]",
     },

@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
 import { FiUser, FiCode, FiFilePlus, FiExternalLink } from "react-icons/fi";
+import { RiStackLine } from "react-icons/ri";
 import { BsXCircle } from "react-icons/bs";
 import Masonry from "react-masonry-css";
 import Modal from "react-modal";
 import portfolioData from "@/data/worksData";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-
+import ImageCarousel from "../shared/ImagesSlider";
 // Modal.setAppElement("#__next");
 
 const Works2 = () => {
@@ -52,7 +53,7 @@ const Works2 = () => {
     if (text === "All") {
       setData(portfolioData);
     } else {
-      const findData = portfolioData.filter((item) => item.tag === text);
+      const findData = portfolioData.filter((item) => item.tag.includes(text));
       setData(findData);
     }
   };
@@ -71,33 +72,33 @@ const Works2 = () => {
         </li>
         <li
           className={`${
-            test === "Video" ? "text-[#FA5252]" : "fillter-btn"
+            test === "Web App" ? "text-[#FA5252]" : "fillter-btn"
           } mr-4 md:mx-4`}
-          onClick={() => handleSearch("Video")}
+          onClick={() => handleSearch("Web App")}
         >
-          Video
+          Web App
         </li>
         <li
           className={`${
-            test === "Web Design" ? "text-[#FA5252]" : "fillter-btn"
+            test === "Mobile App" ? "text-[#FA5252]" : "fillter-btn"
           } mr-4 md:mx-4`}
-          onClick={() => handleSearch("Web Design")}
+          onClick={() => handleSearch("Mobile App")}
         >
-          Web Design
+          Mobile App
         </li>
         <li
           className={`${
-            test === "Logo" ? "text-[#FA5252]" : "fillter-btn ml-0"
+            test === "Services" ? "text-[#FA5252]" : "fillter-btn"
           } mr-4 md:mx-4`}
-          onClick={() => handleSearch("Logo")}
+          onClick={() => handleSearch("Services")}
         >
-          Logo
+          Services
         </li>
         <li
-          className={`${test === "UI/UX" ? "text-[#FA5252]" : "fillter-btn"}  `}
-          onClick={() => handleSearch("UI/UX")}
+          className={`${test === "ERP" ? "text-[#FA5252]" : "fillter-btn"}  `}
+          onClick={() => handleSearch("ERP")}
         >
-          Graphic Design
+          ERP
         </li>
       </ul>
       {/* End portfolio filter tab */}
@@ -108,7 +109,7 @@ const Works2 = () => {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {data.map((item) => (
+        {data.sort((a, b) => b.id - a.id).map((item) => (
           <div
             className="rounded-lg p-6 dark:border-[2px] border-[#212425]"
             style={{
@@ -117,11 +118,14 @@ const Works2 = () => {
             key={item.id}
             onClick={() => handleModle(item?.id)}
           >
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className={`overflow-hidden rounded-lg bg-[${item.imageBg}]`}
+              style={{ backgroundColor: item.imageBg }}
+            >
               <Image
-                className="w-full    cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto "
+                className={`w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg object-center p-5`}
                 src={item.imgSmall}
-                width={300}
+                width={500}
                 height={300}
                 priority
                 alt="portfolio Image"
@@ -129,6 +133,9 @@ const Works2 = () => {
             </div>
             <span className="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">
               {item.tag}
+            </span>
+            <span className="text-[12px] font-normal text-gray-lite block dark:text-[#A6A6A6]">
+              {item.year}
             </span>
             <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
               {item.title}
@@ -143,9 +150,9 @@ const Works2 = () => {
         ariaHideApp={false}
         isOpen={isOpen}
         onRequestClose={() => setIsOpen(false)}
-        className=" outline-none flex items-center  p-4 md:p-8  rounded-2xl my-8"
+        className=" outline-none flex items-center  p-4 md:p-8 rounded-2xl my-8"
       >
-        <div className=" w-full md:w-10/12 flex items-center   lg:w-[850px] bg-white dark:bg-[#323232] mx-auto rounded-xl p-4 md:p-8 absolute left-1/2 top-1/2 transform -translate-x-[50%] -translate-y-[50%] shadow-lg ">
+        <div className=" w-full md:w-10/12 flex items-center lg:w-[850px] bg-white dark:bg-[#323232] mx-auto rounded-xl p-4 md:p-8 absolute left-1/2 top-1/2 transform -translate-x-[50%] -translate-y-[50%] shadow-lg ">
           <div className=" overflow-y-scroll max-h-[80vh] no-scrollbar ">
             {/* close button */}
             <BsXCircle
@@ -153,19 +160,23 @@ const Works2 = () => {
               className="text-7xl cursor-pointer  absolute right-2 -top-12 md:-right-10 md:-top-6 z-50  text-white transition transform hover:rotate-45 duration-300 ease-in-out "
             />
             <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-              {singleData.tag} Project
+              {singleData.title}
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 my-6">
               <div className="space-y-2">
                 <p className="dark:text-white flex items-center text-[15px]  sm:text-lg ">
                   <FiFilePlus className="sm:text-lg hidden sm:block mr-2  md:text-xl" />
-                  Project :&nbsp; <span className="font-medium "> Website</span>
+                  Project :&nbsp; <span className="font-medium "> {singleData.tag}</span>
                 </p>
                 <p className="dark:text-white flex items-center text-[15px]  sm:text-lg ">
-                  <FiCode className="text-lg mr-2 hidden sm:block " />
-                  Langages :&nbsp;
-                  <span className="font-medium ">{singleData?.langages}</span>
+                  <FiCode className="sm:text-lg hidden sm:block mr-2  md:text-xl" />
+                  Role :&nbsp; <span className="font-medium "> {singleData.role}</span>
+                </p>
+                <p className="flex text-sm sm:text-lg dark:text-white">
+                  <RiStackLine className="sm:text-xl hidden sm:block mr-2  md:text-3xl" />
+                  Stack:&nbsp;
+                  <span className="font-medium">{singleData?.languages}</span>
                 </p>
               </div>
 
@@ -178,32 +189,26 @@ const Works2 = () => {
 
                 <p className="dark:text-white flex items-center text-[15px] sm:text-lg ">
                   <FiExternalLink className="text-lg mr-2 hidden sm:block" />
-                  Preview :&nbsp;
+                  Link :&nbsp;
                   <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060] ">
                     <a
                       href={singleData?.link}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {singleData?.linkText}
+                      {singleData?.link ? singleData?.linkText : "-"}
                     </a>
                   </span>
                 </p>
               </div>
             </div>
 
-            <p className="dark:text-white  text-2line font-normal text-[15px] sm:text-sm  ">
+            <p className="dark:text-white  text-2line font-normal text-[15px] sm:text-sm mb-5">
               {singleData?.description}
             </p>
-
-            <Image
-              className="w-full md:h-[450px]  h-auto object-cover rounded-xl mt-6"
-              src={singleData?.img}
-              alt="blog details image"
-              width={620}
-              height={420}
-              loading="lazy"
-            />
+            <div className="p-6 rounded-lg" style={{backgroundColor: singleData.imageBg}}>
+              <ImageCarousel images={singleData.img} />
+            </div>
           </div>
         </div>
       </Modal>

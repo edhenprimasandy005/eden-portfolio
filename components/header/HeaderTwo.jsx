@@ -8,8 +8,10 @@ import DarkModeMobile from "../mode/DarkModeMobile";
 import headerMenu2 from "../../data/HeaderMenu2";
 import { isActiveLink } from "../../utilis/linkActiveChecker";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 
 const HeaderTwo = () => {
+  const { theme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -21,10 +23,10 @@ const HeaderTwo = () => {
         <Link href="/">
           <Image
             className="h-[26px] lg:h-[32px]"
-            width={153}
-            height={26}
+            width={120}
+            height={50}
             priority
-            src="/images/logo/logo.png"
+            src={theme === 'light' ? '/images/logo/logo.png' : '/images/logo/logo-dark.png'}
             alt="logo"
           />
         </Link>

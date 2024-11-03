@@ -41,9 +41,9 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        homeBg: "url('/images/background/bg.jpg')",
+        homeBg: "url('/images/background/bg-light.jpg')",
         "homeBg-dark": "url('/images/background/bg-dark.jpg')",
-        "homeTwoBg-dark": "url('/images/background/bgtwo.jpg')",
+        "homeTwoBg-dark": "url('/images/background/bg-dark-2.jpg')",
         previewBg: "url('/images/preview/previewbg.png')",
       },
       colors: {

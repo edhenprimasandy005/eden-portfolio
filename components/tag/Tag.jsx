@@ -1,15 +1,19 @@
 const Tag = () => {
   const tagList = [
-    "Digital Design",
-    "Marketing",
-    "Social Media",
-    "Print",
-    "Time Management",
-    "Flexibility",
-    "Print",
-    "Time Management",
-    "Flexibility",
-    "Print",
+    "Javascript",
+    "Typescript",
+    "ReactJs",
+    "React Native",
+    "VueJs",
+    "HTML5",
+    "CSS3",
+    "PhP & MySQL",
+    "MongoDB",
+    "PostgreSQL",
+    "Go Language",
+    "C#",
+    ".NET",
+    "AL Code",
   ];
   return (
     <>

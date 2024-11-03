@@ -17,9 +17,9 @@ const Info = () => {
         <>
           <a
             className="hover:text-[#FA5252] duration-300 transition"
-            href="tel:+1234567890"
+            href="tel:+6285233909211"
           >
-            +123 456 7890
+            +62 852 3390 9211
           </a>
         </>
       ),
@@ -30,7 +30,7 @@ const Info = () => {
       icon: <FaMapMarkerAlt />,
       iconColor: "text-[#6AB5B9] ",
       name: "Location",
-      meta: <>Hong kong china</>,
+      meta: <>Banyuwangi, Indonesia</>,
     },
     {
       id: 3,
@@ -43,9 +43,9 @@ const Info = () => {
           {" "}
           <a
             className="hover:text-[#FA5252] duration-300 transition"
-            href="mailto:ibthemes21@gmail.com"
+            href="mailto:edhen.primasandy@gmail.com"
           >
-            example@mail.com
+            edhen.primasandy@gmail.com
           </a>
         </>
       ),
@@ -55,7 +55,7 @@ const Info = () => {
       icon: <FaCalendarAlt />,
       iconColor: "text-[#C17CEB]",
       name: "Birthday",
-      meta: <>May 27, 1990</>,
+      meta: <>August 12, 1994</>,
     },
   ];
 

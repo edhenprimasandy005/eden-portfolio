@@ -7,26 +7,20 @@ const LineItem = ({ item }) => {
     {
       id: 1,
       color: "#FF6464",
-      name: "Web Design",
-      number: "80",
-    },
-    {
-      id: 2,
-      color: "#9272D4",
-      name: "Mobile App ",
+      name: "Front end Engineer",
       number: "95",
     },
     {
-      id: 3,
+      id: 2,
       color: "#5185D4",
-      name: "Illustrator",
-      number: "65",
+      name: "Back end Engineer",
+      number: "50",
     },
     {
-      id: 4,
-      color: "#CA56F2",
-      name: "Photoshope",
-      number: "75",
+      id: 3,
+      color: "#9272D4",
+      name: "Mobile App ",
+      number: "80",
     },
   ];
 

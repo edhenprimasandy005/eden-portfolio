@@ -7,19 +7,10 @@ module.exports = [
       <>
         <p>
           <a
-            href="tel:+452 666 386"
-            className="text-gray-lite text-lg dark:text-[#A6A6A6] "
+            href="tel:+62 852 3390 9211"
+            className="text-gray-lite text-base dark:text-[#A6A6A6] "
           >
-            +452 666 386
-          </a>
-        </p>
-
-        <p>
-          <a
-            href="tel:+654 764 878"
-            className="text-gray-lite text-lg dark:text-[#A6A6A6] "
-          >
-            +654 764 878
+            +62 852 3390 9211
           </a>
         </p>
       </>
@@ -34,19 +25,10 @@ module.exports = [
       <>
         <p>
           <a
-            href="mailto:ibthemes21@gmail.com"
-            className="text-gray-lite text-lg dark:text-[#A6A6A6] "
+            href="mailto:edhen.primasandy@gmail.com"
+            className="text-gray-lite text-base dark:text-[#A6A6A6] "
           >
-            ibthemes@gmail.com
-          </a>
-        </p>
-
-        <p>
-          <a
-            href="mailto:xyz@abc.com"
-            className="text-gray-lite text-lg dark:text-[#A6A6A6] "
-          >
-            mailto:xyz@abc.com
+            edhen.primasandy@gmail.com
           </a>
         </p>
       </>
@@ -59,11 +41,8 @@ module.exports = [
     title: "Address ",
     info: (
       <>
-        <p className="text-gray-lite text-lg dark:text-[#A6A6A6] ">
-          Maount View, Oval
-        </p>
-        <p className="text-gray-lite text-lg dark:text-[#A6A6A6] ">
-          Road, New York, USA
+        <p className="text-gray-lite text-base dark:text-[#A6A6A6] ">
+          Banyuwangi, Indonesia
         </p>
       </>
     ),

@@ -15,7 +15,22 @@
     display: flex !important;
     align-items: center;
 }
-
+.carousel-container {
+    max-width: 450px;
+    margin: auto;
+  }
+  
+.carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 /* responsive css */
 .swiper-container {
     width: 480px;
